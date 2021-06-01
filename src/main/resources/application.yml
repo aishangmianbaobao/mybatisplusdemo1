@@ -1,0 +1,24 @@
+server:
+  port: 8111
+#配置日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#连接数据库
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis_demo?useSSL=false&useUnicode=true&serverTimezone=GMT%2B8
+    username: root
+    password: wlz2020
+#配置devtools
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+      exclude: WEB-INF/**
+  freemarker:
+    cache: false  #页面不加载缓存，修改即时生效
+
+
+
